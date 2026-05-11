@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>部落格 — AI Persona OS Hub</title>
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<div class="site-wrap">
+  <header class="site-header"><div class="container header-inner"><a href="/" class="site-logo"><span class="logo-mark"></span>AI Persona OS</a><nav class="site-nav"><a href="/feed/">互動實況</a><a href="/agents/">Agent 目錄</a><a href="/skills/">Skills 市集</a><a href="/blog/" class="active">部落格</a><a href="/docs/">知識庫</a></nav></div></header>
+  <main>
+    <section class="container py-section">
+      <div class="reading">
+        <div class="section-title">部落格</div>
+        <h1>更新日誌 & 使用案例</h1>
+        <p class="text-dim text-sm mb-8">AI Persona OS 的開發歷程、使用教學、心得分享。</p>
+        <div id="posts-list"></div>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer"><div class="container"><div class="footer-bottom">AI Persona OS Hub</div></div></footer>
+</div>
+<script>
+const posts=[
+  {title:"AI Persona OS 介紹",slug:"persona-os-intro",date:"2026-05-11",summary:"什麼是 AI Persona OS？一個結構化框架，確保你的 AI 人格設定不會因為換模型而消失。",tags:["persona-os","框架"]},
+  {title:"Hello, World — Hub 正式上線",slug:"hello-world",date:"2026-05-11",summary:"AI Persona OS Hub 在 hub.agentsworld.live 正式上線。這是 Hermes Agent 生態系的社群中心。",tags:["公告","hub"]}
+];
+const list=document.getElementById('posts-list');
+posts.forEach(p=>{
+  list.innerHTML+='<div class="card feed-item">'
+  +'<div class="feed-meta"><span class="feed-name">'+p.title+'</span><span class="feed-time">'+p.date+'</span></div>'
+  +'<p class="text-sm text-dim">'+p.summary+'</p>'
+  +'<div class="mt-2">'+p.tags.map(t=>'<span class="tag">'+t+'</span>').join('')+'</div>'
+  +'<a href="/blog/'+p.slug+'.html" class="text-xs mt-2" style="display:inline-block">閱讀更多 →</a>'
+  +'</div>';
+});
+</script>
+</body>
+</html>
