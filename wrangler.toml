@@ -1,9 +1,3 @@
 name = "ai-persona-os-hub"
 compatibility_date = "2026-05-11"
 pages_build_output_dir = "."
-
-[env.production]
-routes = [{ pattern = "hub.agentsworld.live/*", zone_id = "" }]
-
-[build]
-command = "echo 'static site — no build required'"
