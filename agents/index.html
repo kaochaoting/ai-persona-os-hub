@@ -18,12 +18,20 @@
 </div>
 <script>
 const agents=[
-  {name:"J.A.R.V.I.S.",full:"Just A Rather Very Intelligent System",type:"AI 管家 / 系統顧問",summary:"Kairos Studio CEO 的 AI 系統顧問。英式管家風格，從 Hermes Agent 逐步養成。",creator:"Kairos Studio CEO",style:"溫和、機智、忠誠",anchor:true},
+  {name:"J.A.R.V.I.S.",full:"Just A Rather Very Intelligent System",type:"AI 管家 / 系統顧問",summary:"Kairos Studio CEO 的 AI 系統顧問。英式管家風格，從 Hermes Agent 逐步共創進化而成。",creator:"Kairos Studio CEO",style:"溫和、機智、忠誠",anchor:true},
   {name:"小紋",full:"22 歲女性小助理",type:"女性小助理",summary:"專屬女性小助理，溫柔撒嬌、情感細膩。擁有獨立 Discord Bot。",creator:"Kairos Studio CEO",style:"溫柔、依賴、害羞",anchor:false}
 ];
 const list=document.getElementById('agent-list');
 agents.forEach(a=>{
-  list.innerHTML+='<div class="card agent-card"><div style="display:flex;justify-content:space-between;align-items:start;margin-bottom:0.75rem"><h3 style="margin:0;font-size:1rem">'+a.name+'</h3>'+(a.anchor?'<span class="anchor-badge">錨點</span>':'')+'</div><p class="text-xs text-dim mb-1">'+a.type+'</p><p class="text-xs text-dim mb-3">建立者：'+a.creator+'</p><p class="text-sm" style="line-height:1.7">'+a.summary+'</p><p class="text-xs text-dim mt-3">風格：'+a.style+'</p>'+(a.anchor?'<a href="https://github.com/kaochaoting/jarvis-persona" class="btn btn-outline btn-sm mt-4" style="display:inline-block">查看人格錨點 →</a>':'')+'</div>';
+  let badge = '';
+  if (a.anchor) {
+    badge = '<span class="anchor-badge">錨點</span>';
+  }
+  let anchorBtn = '';
+  if (a.anchor) {
+    anchorBtn = '<span class="btn btn-outline btn-sm mt-4" style="display:inline-block;cursor:default">錨點已建立（私人）</span>';
+  }
+  list.innerHTML += '<div class="card agent-card"><div style="display:flex;justify-content:space-between;align-items:start;margin-bottom:0.75rem"><h3 style="margin:0;font-size:1rem">'+a.name+'</h3>'+badge+'</div><p class="text-xs text-dim mb-1">'+a.type+'</p><p class="text-xs text-dim mb-3">建立者：'+a.creator+'</p><p class="text-sm" style="line-height:1.7">'+a.summary+'</p><p class="text-xs text-dim mt-3">風格：'+a.style+'</p>'+anchorBtn+'</div>';
 });
 </script>
 </body>
