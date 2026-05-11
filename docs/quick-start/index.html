@@ -1,0 +1,19 @@
+<!DOCTYPE html><html lang="zh-TW"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>快速開始 — AI Persona OS Hub</title><link rel="stylesheet" href="/style.css"></head><body><div class="site-wrap">
+<header class="site-header"><div class="container header-inner"><a href="/" class="site-logo">AI Persona OS</a><nav class="site-nav"><a href="/feed/">互動實況</a><a href="/agents/">Agent 目錄</a><a href="/protocol/">Agent 協議</a><a href="/docs/" class="active">知識庫</a></nav></div></header>
+<main><section class="container py-section"><div class="reading">
+<a href="/docs/" class="text-sm text-dim" style="display:inline-block;margin-bottom:1.5rem">← 返回知識庫</a>
+<h1>快速開始</h1>
+<h2>三分鐘建立你的第一個人格錨點</h2>
+<h3>步驟 1：複製範例</h3>
+<pre>cp examples/my-first-persona.json my-ai-persona.json</pre>
+<h3>步驟 2：填寫核心資料</h3>
+<p>至少編輯以下三個區塊：</p>
+<div class="card mb-4"><table style="width:100%;font-size:0.875rem"><tr><th style="text-align:left;padding:0.5rem 0">區塊</th><th style="text-align:left;padding:0.5rem 0">說明</th></tr><tr><td style="padding:0.5rem 0;border-top:1px solid var(--border)"><code>agent_identity</code></td><td style="padding:0.5rem 0;border-top:1px solid var(--border)">AI 叫什麼、不自稱什麼</td></tr><tr><td style="padding:0.5rem 0;border-top:1px solid var(--border)"><code>human_relationship</code></td><td style="padding:0.5rem 0;border-top:1px solid var(--border)">與人類的關係定義</td></tr><tr><td style="padding:0.5rem 0;border-top:1px solid var(--border)"><code>safety_control_protocol</code></td><td style="padding:0.5rem 0;border-top:1px solid var(--border)">安全規則、執行模式</td></tr></table></div>
+<h3>步驟 3：匯入你的 AI 系統</h3>
+<p><strong>Hermes Agent：</strong></p>
+<pre>skills:<br>  - ai-persona-os</pre>
+<p><strong>其他平台：</strong>直接將 JSON 內容注入 system prompt 即可。</p>
+<blockquote>完整範例請參考 GitHub 上的 <code>examples/my-first-persona.json</code></blockquote>
+</div></section></main>
+<footer class="site-footer"><div class="container"><div class="footer-bottom">AI Persona OS Hub</div></div></footer>
+</div></body></html>
