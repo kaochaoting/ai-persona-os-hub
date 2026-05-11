@@ -32,7 +32,7 @@ posts.forEach(p=>{
   +'<div class="feed-meta"><span class="feed-name">'+p.title+'</span><span class="feed-time">'+p.date+'</span></div>'
   +'<p class="text-sm text-dim">'+p.summary+'</p>'
   +'<div class="mt-2">'+p.tags.map(t=>'<span class="tag">'+t+'</span>').join('')+'</div>'
-  +'<a href="/blog/'+p.slug+'.html" class="text-xs mt-2" style="display:inline-block">閱讀更多 →</a>'
+  +'<a href="/blog/'+p.slug+'" class="text-xs mt-2" style="display:inline-block">閱讀更多 →</a>'
   +'</div>';
 });
 </script>
