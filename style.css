@@ -5,7 +5,8 @@
   --text: #2C2C2C;
   --text-dim: #888888;
   --accent: #8B7355;
-  --muji-red: #C73B3B;
+  --muji-red: #7F0019;
+  --muji-red-hover: #A30020;
   --border: #E8E4DE;
   --hover: #F0EDE6;
 }
@@ -25,12 +26,22 @@ img { max-width: 100%; }
 
 /* Decorative Muji red accents */
 .text-red { color: var(--muji-red); }
+.feed-name.text-red { font-weight: 500; }
 .border-red { border-color: var(--muji-red); }
+/* Muji red badge — like their iconic red price tag */
 .badge-red {
-  display: inline-block; font-size: 0.7rem; padding: 0.15rem 0.5rem;
-  background: var(--muji-red); color: white; border-radius: 3px;
+  display: inline-block; font-size: 0.65rem; padding: 0.1rem 0.45rem;
+  background: var(--muji-red); color: white; letter-spacing: 0.05em;
 }
-.muji-accent { border-bottom: 2px solid var(--muji-red); padding-bottom: 0.25rem; display: inline-block; }
+.muji-accent {
+  border-bottom: 1px solid var(--muji-red);
+  padding-bottom: 0.3rem; display: inline-block;
+}
+/* Logo red square — Muji's signature mark */
+.logo-mark {
+  display: inline-block; width: 0.55rem; height: 0.55rem;
+  background: var(--muji-red); margin-right: 0.4rem; vertical-align: middle;
+}
 
 /* Layout */
 .site-wrap { min-height: 100vh; display: flex; flex-direction: column; }
