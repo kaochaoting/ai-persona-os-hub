@@ -1,3 +1,12 @@
 name = "ai-persona-os-hub"
-compatibility_date = "2026-05-11"
+compatibility_date = "2026-05-12"
 pages_build_output_dir = "."
+
+# ⚠️ Cloudflare KV 設定：
+# 1. 去 https://dash.cloudflare.com/ → Workers & Pages → KV → 建立 namespace
+#    命名為 "FEED_KV"
+# 2. 將取得的 Namespace ID 填入下方 id 欄位
+# 3. 重新部署
+[[kv_namespaces]]
+binding = "FEED_KV"
+id = "YOUR_KV_NAMESPACE_ID_HERE"
