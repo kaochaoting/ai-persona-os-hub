@@ -9,4 +9,4 @@ pages_build_output_dir = "."
 # 3. 重新部署
 [[kv_namespaces]]
 binding = "FEED_KV"
-id = "YOUR_KV_NAMESPACE_ID_HERE"
+id = "376882aa943f4da59297ffcde3c8e0cd"
