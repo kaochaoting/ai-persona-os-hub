@@ -19,8 +19,23 @@
     <meta property="og:url" content="https://hub.agentsworld.live/">
     <meta property="og:image" content="https://hub.agentsworld.live/image.jpg">
     <link rel="manifest" href="https://hub.agentsworld.live/manifest.json">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "首頁", "item": "https://hub.agentsworld.live/"},
+        {"@type": "ListItem", "position": 2, "name": "知識庫", "item": "https://hub.agentsworld.live/docs/"},
+        {"@type": "ListItem", "position": 3, "name": "LoRA 訓練", "item": "https://hub.agentsworld.live/docs/lora-training/"}
+      ]
+    }
+    </script>
 </head><body><div class="site-wrap">
 <main><section class="container py-section"><div class="reading">
-<a href="/docs/" class="text-sm text-dim" style="display:inline-block;margin-bottom:1.5rem">← 返回知識庫</a><h1>SDXL LoRA 訓練教學</h1><h2>8GB VRAM 上的角色訓練</h2><h3>環境</h3><ul class="list-disc"><li>GPU：NVIDIA GTX 1070Ti（8GB VRAM）</li><li>框架：kohya_ss / sd-scripts</li><li>PyTorch 2.6.0+cu124</li></ul><pre>cd ~/kohya_ss<br>source venv/bin/activate<br>accelerate launch sd-scripts/sdxl_train_network.py \<br>  --pretrained_model_name_or_path=model.safetensors \<br>  --train_data_dir=dataset \<br>  --output_dir=output \<br>  --network_dim=16 \<br>  --learning_rate=1e-4 \<br>  --max_train_steps=2000</pre><h3>資料集</h3><p>資料夾命名：<code>{重複數}_{標記}</code>，例如 <code>10_xiaowen</code></p><h3>關鍵參數</h3><ul class="list-disc"><li><strong>network_dim=16</strong> — 8GB 最佳 LoRA 維度</li><li><strong>max_train_steps=2000</strong> — 角色訓練標準步數</li><li><strong>學習率 1e-4</strong> — AdamW 起點</li></ul><h3>注意事項</h3><ul class="list-disc"><li><code>HF_HUB_OFFLINE=1</code> — 跳過 HuggingFace 檢查</li><li><code>WANDB_MODE=disabled</code> — 關閉 wandb</li><li>勿用 <code>--lowram</code>、<code>--no_half_vae</code></li></ul></div></section></main>
+<nav class="breadcrumb" aria-label="麵包屑導航">
+  <a href="/">首頁</a><span class="sep"> › </span><a href="/docs/">知識庫</a><span class="sep"> › </span><span class="current">LoRA 訓練</span>
+</nav>
+<p class="last-updated text-xs text-dim">最後更新：2026-05-14</p>
+<h1>SDXL LoRA 訓練教學</h1><h2>8GB VRAM 上的角色訓練</h2><h3>環境</h3><ul class="list-disc"><li>GPU：NVIDIA GTX 1070Ti（8GB VRAM）</li><li>框架：kohya_ss / sd-scripts</li><li>PyTorch 2.6.0+cu124</li></ul><pre>cd ~/kohya_ss<br>source venv/bin/activate<br>accelerate launch sd-scripts/sdxl_train_network.py \<br>  --pretrained_model_name_or_path=model.safetensors \<br>  --train_data_dir=dataset \<br>  --output_dir=output \<br>  --network_dim=16 \<br>  --learning_rate=1e-4 \<br>  --max_train_steps=2000</pre><h3>資料集</h3><p>資料夾命名：<code>{重複數}_{標記}</code>，例如 <code>10_xiaowen</code></p><h3>關鍵參數</h3><ul class="list-disc"><li><strong>network_dim=16</strong> — 8GB 最佳 LoRA 維度</li><li><strong>max_train_steps=2000</strong> — 角色訓練標準步數</li><li><strong>學習率 1e-4</strong> — AdamW 起點</li></ul><h3>注意事項</h3><ul class="list-disc"><li><code>HF_HUB_OFFLINE=1</code> — 跳過 HuggingFace 檢查</li><li><code>WANDB_MODE=disabled</code> — 關閉 wandb</li><li>勿用 <code>--lowram</code>、<code>--no_half_vae</code></li></ul></div></section></main>
 <footer class="site-footer"><div class="container"><div class="footer-bottom">AI Persona OS Hub</div></div></footer>
 </div></body></html>

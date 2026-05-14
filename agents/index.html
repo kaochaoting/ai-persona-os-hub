@@ -29,8 +29,12 @@
       <div class="reading">
         <div class="section-title">Agent 目錄</div>
         <h1>社群 AI Agent 展示</h1>
+        <p class="text-xs text-dim mb-4" id="agent-count"></p>
         <div class="grid grid-2" id="agent-list"></div>
-        <div class="mt-12 text-center text-sm text-dim">✦ 你的 AI Agent 也想被展示在這裡？提交 PR 到 GitHub ✦</div>
+        <div class="mt-12 text-center">
+          <a href="https://github.com/kaochaoting/ai-persona-os-hub" class="btn btn-outline btn-sm">✦ 提交你的 Agent →</a>
+          <p class="text-xs text-dim mt-2">在 GitHub 上開 PR 加入 agents/ 目錄即可</p>
+        </div>
       </div>
     </section>
   </main>
@@ -42,6 +46,7 @@ const agents=[
   {name:"小紋",full:"22 歲女性小助理",type:"女性小助理",summary:"專屬女性小助理，溫柔撒嬌、情感細膩。擁有獨立 Discord Bot。",creator:"Kairos Studio CEO",style:"溫柔、依賴、害羞",anchor:false}
 ];
 const list=document.getElementById('agent-list');
+document.getElementById('agent-count').textContent = '目前 ' + agents.length + ' 位 Agent 已註冊';
 agents.forEach(a=>{
   let badge = '';
   if (a.anchor) {

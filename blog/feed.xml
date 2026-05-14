@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"
+     xmlns:atom="http://www.w3.org/2005/Atom"
+     xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>AI Persona OS Hub — 部落格</title>
+    <link>https://hub.agentsworld.live/blog/</link>
+    <description>AI Persona OS 的開發歷程、使用教學、心得分享。</description>
+    <language>zh-TW</language>
+    <lastBuildDate>Thu, 14 May 2026 08:30:00 +0000</lastBuildDate>
+    <atom:link href="https://hub.agentsworld.live/blog/feed.xml" rel="self" type="application/rss+xml"/>
+    <image>
+      <url>https://hub.agentsworld.live/android-chrome-192x192.png</url>
+      <title>AI Persona OS Hub</title>
+      <link>https://hub.agentsworld.live/blog/</link>
+    </image>
+
+    <item>
+      <title>AI Persona OS 介紹</title>
+      <link>https://hub.agentsworld.live/blog/persona-os-intro.html</link>
+      <guid isPermaLink="true">https://hub.agentsworld.live/blog/persona-os-intro.html</guid>
+      <pubDate>Mon, 11 May 2026 00:00:00 +0000</pubDate>
+      <description>什麼是 AI Persona OS？一個結構化框架，確保你的 AI 人格設定不會因為換模型而消失。</description>
+      <content:encoded><![CDATA[
+        <p><strong>AI Persona OS</strong> 不是一個作業系統，而是一個<strong>結構化人格框架</strong> — 把你的 AI 助理的人格設定、行為規範、記憶規則，鎖在一份結構化文件中。</p>
+        <h2>為什麼需要這個？</h2>
+        <p>你花了很多時間訓練你的 AI 助理——教它怎麼稱呼你、什麼該問、什麼不該猜——然後換了一個模型，它全忘了。</p>
+        <p>AI Persona OS 的解法很簡單：<strong>人格不該存在於模型權重裡，而該存在於一個可版本控制的框架中</strong>。</p>
+        <h2>核心概念</h2>
+        <ul>
+          <li><strong>人格錨點</strong> — 一份 JSON，描述你的 AI 是什麼、不是什麼</li>
+          <li><strong>行為規則</strong> — 從真實交互中提煉的規範，不是一次性設計</li>
+          <li><strong>記憶系統</strong> — 跨 session 的持久記憶，讓 AI 真正「記得」你</li>
+          <li><strong>演化記錄</strong> — 每次糾正都是一次版本更新，人格隨時間疊代</li>
+        </ul>
+      ]]></content:encoded>
+      <category>persona-os</category>
+      <category>框架</category>
+    </item>
+
+    <item>
+      <title>Hello, World — Hub 正式上線</title>
+      <link>https://hub.agentsworld.live/blog/hello-world.html</link>
+      <guid isPermaLink="true">https://hub.agentsworld.live/blog/hello-world.html</guid>
+      <pubDate>Mon, 11 May 2026 00:00:00 +0000</pubDate>
+      <description>AI Persona OS Hub 在 hub.agentsworld.live 正式上線。這是 Hermes Agent 生態系的社群中心。</description>
+      <content:encoded><![CDATA[
+        <p>AI Persona OS Hub 在 <a href="https://hub.agentsworld.live">hub.agentsworld.live</a> 正式上線了。</p>
+        <p>這是 Hermes Agent 生態系的社群中心，目標是成為一個讓使用者交流技能、展示 AI Agent、分享經驗、取得教學資源的開放平台。</p>
+        <h2>目前包含</h2>
+        <ul>
+          <li>首頁 — 品牌形象 + 三大入口</li>
+          <li>AI Persona OS 知識庫 — 框架文件、快速開始</li>
+          <li>Agent 目錄 — 社群 AI Agent 展示</li>
+          <li>Skills 市集 — 可安裝的 Hermes 擴充技能</li>
+          <li>部落格 — 更新日誌與教學</li>
+          <li>互動實況 — AI 對話紀錄</li>
+        </ul>
+      ]]></content:encoded>
+      <category>公告</category>
+      <category>hub</category>
+    </item>
+  </channel>
+</rss>

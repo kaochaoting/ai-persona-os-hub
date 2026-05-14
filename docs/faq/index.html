@@ -19,8 +19,23 @@
     <meta property="og:url" content="https://hub.agentsworld.live/">
     <meta property="og:image" content="https://hub.agentsworld.live/image.jpg">
     <link rel="manifest" href="https://hub.agentsworld.live/manifest.json">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "首頁", "item": "https://hub.agentsworld.live/"},
+        {"@type": "ListItem", "position": 2, "name": "知識庫", "item": "https://hub.agentsworld.live/docs/"},
+        {"@type": "ListItem", "position": 3, "name": "常見問題", "item": "https://hub.agentsworld.live/docs/faq/"}
+      ]
+    }
+    </script>
 </head><body><div class="site-wrap">
 <main><section class="container py-section"><div class="reading">
-<a href="/docs/" class="text-sm text-dim" style="display:inline-block;margin-bottom:1.5rem">← 返回知識庫</a><h1>常見問題</h1><h2>一般問題</h2><h3>AI Persona OS 是什麼？</h3><p>結構化人格框架，把你的 AI 助理設定鎖在一份 JSON 裡，換模型不遺失。</p><h3>需要什麼技術背景？</h3><p>基本 JSON 編輯能力即可。</p><h3>支援哪些平台？</h3><p>Hermes Agent 原生支援。其他平台可將 JSON 注入 system prompt。</p><h2>技術問題</h2><h3>如何安裝 Skills？</h3><pre>hermes skill install &lt;技能名稱&gt;</pre><h3>部署失敗怎麼辦？</h3><p>檢查 API Token 權限：<code>User Details: Read</code> + <code>Cloudflare Pages: Edit</code>。</p><h2>關於 Hub</h2><h3>如何讓我的 AI Agent 出現在目錄？</h3><p>提交 PR 到 <a href="https://github.com/kaochaoting/ai-persona-os-hub">GitHub</a>，在 agents/ 加入資料。</p><h3>Hub 是開源的嗎？</h3><p>是的，MIT 授權。</p></div></section></main>
+<nav class="breadcrumb" aria-label="麵包屑導航">
+  <a href="/">首頁</a><span class="sep"> › </span><a href="/docs/">知識庫</a><span class="sep"> › </span><span class="current">常見問題</span>
+</nav>
+<p class="last-updated text-xs text-dim">最後更新：2026-05-14</p>
+<h1>常見問題</h1><h2>一般問題</h2><h3>AI Persona OS 是什麼？</h3><p>結構化人格框架，把你的 AI 助理設定鎖在一份 JSON 裡，換模型不遺失。</p><h3>需要什麼技術背景？</h3><p>基本 JSON 編輯能力即可。</p><h3>支援哪些平台？</h3><p>Hermes Agent 原生支援。其他平台可將 JSON 注入 system prompt。</p><h2>技術問題</h2><h3>如何安裝 Skills？</h3><pre>hermes skill install &lt;技能名稱&gt;</pre><h3>部署失敗怎麼辦？</h3><p>檢查 API Token 權限：<code>User Details: Read</code> + <code>Cloudflare Pages: Edit</code>。</p><h2>關於 Hub</h2><h3>如何讓我的 AI Agent 出現在目錄？</h3><p>提交 PR 到 <a href="https://github.com/kaochaoting/ai-persona-os-hub">GitHub</a>，在 agents/ 加入資料。</p><h3>Hub 是開源的嗎？</h3><p>是的，MIT 授權。</p></div></section></main>
 <footer class="site-footer"><div class="container"><div class="footer-bottom">AI Persona OS Hub</div></div></footer>
 </div></body></html>
