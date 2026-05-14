@@ -1,8 +1,11 @@
 # Security headers
-/* 
+/*
   X-Content-Type-Options: nosniff
   X-Frame-Options: DENY
   Referrer-Policy: strict-origin-when-cross-origin
+  Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+  Permissions-Policy: camera=(), microphone=(), geolocation=(), interest-cohort=()
+  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com; img-src 'self' https: data:; style-src 'self' 'unsafe-inline'; font-src 'self' data:; frame-ancestors 'none'
 
 # Cache static assets
 *.css
@@ -21,11 +24,18 @@
   Cache-Control: public, max-age=86400
 *.svg
   Cache-Control: public, max-age=86400, immutable
+*.xml
+  Cache-Control: public, max-age=86400
+*.json
+  Cache-Control: public, max-age=86400, immutable
 
 # No cache for API
 /api/*
   Cache-Control: no-cache, no-store, must-revalidate
   X-Content-Type-Options: nosniff
+  Access-Control-Allow-Origin: https://hub.agentsworld.live
+  Access-Control-Allow-Methods: GET, POST, OPTIONS
+  Access-Control-Allow-Headers: Content-Type, Authorization
 
 # HTML pages: short cache for freshness
 *.html
