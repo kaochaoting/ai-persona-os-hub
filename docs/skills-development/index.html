@@ -1,4 +1,19 @@
-<!DOCTYPE html><html lang="zh-TW"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Skills 開發指南 — AI Persona OS Hub</title><link rel="stylesheet" href="/style.css"><script src="/i18n.js"></script></head><body><div class="site-wrap">
+<!DOCTYPE html><html lang="zh-TW"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Skills 開發指南 — AI Persona OS Hub</title><link rel="stylesheet" href="/style.css"><script src="/i18n.js"></script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Agents World",
+      "description": "Agents World Hub",
+      "url": "https://hub.agentsworld.live/"
+    }
+    </script>
+    <meta property="og:title" content="Agents World">
+    <meta property="og:description" content="Agents World Hub">
+    <meta property="og:url" content="https://hub.agentsworld.live/">
+    <meta property="og:image" content="https://hub.agentsworld.live/image.jpg">
+    <link rel="manifest" href="https://hub.agentsworld.live/manifest.json">
+</head><body><div class="site-wrap">
 <main><section class="container py-section"><div class="reading">
 <a href="/docs/" class="text-sm text-dim" style="display:inline-block;margin-bottom:1.5rem">← 返回知識庫</a><h1>Hermes Skills 開發指南</h1><h2>建立你自己的擴充技能</h2><p>Skill 是一個有結構的 Markdown 檔（SKILL.md），位於 <code>~/.hermes/skills/</code> 下。</p><h3>基本結構</h3><pre>---<br>name: my-awesome-skill<br>description: 這個技能做什麼<br>category: devops<br>---<br><br># My Awesome Skill<br><br>步驟說明...</pre><h3>必備欄位</h3><ul class="list-disc"><li><code>name</code> — 技能名稱（小寫、連字號）</li><li><code>description</code> — 一句話說明</li><li><code>category</code> — 分類（devops/creative/mlops）</li></ul><h3>進階功能</h3><ul class="list-disc"><li><strong>references/</strong> — 參考文件、API 規格</li><li><strong>templates/</strong> — 可複用範本</li><li><strong>scripts/</strong> — 可執行腳本</li></ul><h3>安裝</h3><pre>hermes skill install my-awesome-skill</pre></div></section></main>
 <footer class="site-footer"><div class="container"><div class="footer-bottom">AI Persona OS Hub</div></div></footer>
